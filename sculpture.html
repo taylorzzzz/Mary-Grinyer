@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mary Grinyer | Sculpture </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta charset = "UTF-8">
+	<meta name = "description" content = "Drawing is the first step in creating my sculptures.">
+	<meta name = "keywords" content = "Mary Grinyer, Grinyer, marygrinyer, Ceramics, Sculpture, Printmaking, Fine Art">
+	<meta name = "author" content = "Taylor Ward">
+	<link rel="icon" type="image/png" href="MG.png"/>
+
+	<link rel="stylesheet" type="text/css" href="css/lightgallery.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway" />	
+	<script type="text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#mobile-nav").html($("#main-nav").html());
+			$("#mobile-nav li.super-item > a").prepend("<span>+</span>");
+
+			// disable the default redirect action for links with submenus 
+			$("#mobile-nav li.super-item > a").click(function(event) {
+					event.preventDefault();
+					if ($(this).siblings("#dropdown-list").hasClass("expanded")) {
+						$(this).siblings().removeClass("expanded").slideUp(200,"linear");
+						$(this).children("span").empty();
+						$(this).children("span").text("+");
+					}	
+					else {
+						$(this).siblings().addClass("expanded").slideDown(200,"linear");
+						$(this).siblings("span").empty();
+						$(this).children("span").text("-");
+					}
+				});
+
+			// handle menu clicks
+			$("#menu-trigger").click(function() {
+					if ($("#mobile-nav > ul").hasClass("expanded")) {
+						$("#mobile-nav ul.expanded").removeClass("expanded").slideUp(200, "linear");
+						$(this).removeClass("open");
+					} 
+					else {
+						$("#mobile-nav > ul").addClass("expanded").slideDown(200, "linear");
+						$(this).addClass("open");
+					}
+				});
+
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<nav id = "main-nav">
+			<ul id = "menu">
+				<li><a href="index.html">Home</a></li>
+				<li class="super-item"><a href="bio.html">About</a>
+					<ul id = "dropdown-list">
+						<li><a href = "bio.html">Bio</a></li>
+					</ul>
+				</li>
+				<li  id = "active" class="super-item"><a href="work.html">Work</a>
+					<ul id = "dropdown-list">
+						<li><a href = "ceramics.html">Ceramics</a></li>
+						<li  id = "active"><a href = "sculpture.html">Sculpture</a></li>
+					</ul>
+				</li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div id="menu-trigger">Menu</div>
+		<div id="mobile-nav"></div>
+		<div id = "logo">
+			<h1><a href = "index.html">GRINYER</a></h1>
+			<p>Fine Art and Ceramics</p>
+		</div>
+
+	</header>
+	<div class = "content" id = "sculpture-content">
+		<div class = "banner-image" id = "banner-image-sculpture">
+		</div>
+
+		<div class = "work-text" id = "sculpture-text">
+			
+			<h2>Sculpture</h2>
+			<br>
+			<br>
+			<p>Drawing is the first step in creating my sculptures. I'll make several. Then I create small sculptures of some of the drawings and sometimes while doing this I get a new idea and try it in clay. Next I will choose one idea to make a large sculpture. The finished work may be very different then my original idea. On the small pieces I may experiment with different textures or glazes. Many of my sculptures are smooth instead of textured and the curves and negative shapes are important. I have used two glazes that make the works look like bronze metal with a subtle patina and other matt glazes. </p>
+		
+		</div>
+		<div class = "thumbnails" id = "sculpture-thumbnails">
+			<p id = "thumbnail-instructions">Click thumbnails below for more info.</p>
+			<div class = "thumbnail-container" id = "sculpture-thumbnail-container">
+				<div class = "thumbnail" data-src = "assets/imgs/work/c7.jpg">
+					<img src="assets/imgs/thumbnails/thumb7.jpg" alt = "Grinyer Sculpture 1">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c11.jpg">
+					<img src="assets/imgs/thumbnails/thumb11.jpg" alt = "Grinyer Sculpture 2">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c14.jpg">
+					<img src="assets/imgs/thumbnails/thumb14.jpg" alt = "Grinyer Sculpture 3">
+				</div>
+				
+				<div class = "thumbnail" data-src = "assets/imgs/work/c17.jpg">
+					<img src="assets/imgs/thumbnails/thumb17.jpg" alt = "Grinyer Sculpture 4">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c18.jpg">
+					<img src="assets/imgs/thumbnails/thumb18.jpg" alt = "Grinyer Sculpture 5">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c19.jpg">
+					<img src="assets/imgs/thumbnails/thumb19.jpg" alt = "Grinyer Sculpture 6">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c20.jpg">
+					<img src="assets/imgs/thumbnails/thumb20.jpg" alt = "Grinyer Sculpture 7">
+				</div>
+				
+				<div class = "thumbnail" data-src = "assets/imgs/work/c26.jpg">
+					<img src="assets/imgs/thumbnails/thumb26.jpg" alt = "Grinyer Sculpture 8">
+				</div>
+				
+				<div class = "thumbnail" data-src = "assets/imgs/work/c28.jpg">
+					<img src="assets/imgs/thumbnails/thumb28.jpg" alt = "Grinyer Sculpture 9">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c29.jpg">
+					<img src="assets/imgs/thumbnails/thumb29.jpg" alt = "Grinyer Sculpture 10">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c30.jpg">
+					<img src="assets/imgs/thumbnails/thumb30.jpg" alt = "Grinyer Sculpture 11">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c31.jpg">
+					<img src="assets/imgs/thumbnails/thumb31.jpg" alt = "Grinyer Sculpture 12">
+				</div>
+				
+				<div class = "thumbnail" data-src = "assets/imgs/work/c33.jpg">
+					<img src="assets/imgs/thumbnails/thumb33.jpg" alt = "Grinyer Sculpture 13">
+				</div>
+				
+				<div class = "thumbnail" data-src = "assets/imgs/work/c35.jpg">
+					<img src="assets/imgs/thumbnails/thumb35.jpg" alt = "Grinyer Sculpture 14">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c45.jpg">
+					<img src="assets/imgs/thumbnails/thumb45.jpg" alt = "Grinyer Sculpture 15">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c50.jpg">
+					<img src="assets/imgs/thumbnails/thumb50.jpg" alt = "Grinyer Sculpture 16">
+				</div>
+			</div>
+		</div>
+	
+		</div>
+
+	</div>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$("#sculpture-thumbnail-container").lightGallery({
+				download:false,
+			});
+		});
+	</script>
+		<footer>
+		<div id="slide">
+			<!--
+        	<a href="#"> Twit</a>
+       		<a href="#"> Face</a>
+        	<a href="#"> Etsy</a>
+        	-->
+        	Copyright © 2016 Mary Grinyer
+
+
+    </div>
+	</footer>
+	
+	<script type="text/javascript">
+		$('footer').hover(function() {
+			$('#slide').slideToggle("fast");
+		});
+	</script>
+
+	<!--	lightGallery  -->
+	<script type="text/javascript" src = "js/lightgallery.js"></script>
+	<script type="text/javascript" src = "js/lg-thumbnail.min.js"></script>
+	<script type="text/javascript" src = "js/lg-zoom.js"></script>
+
+
+</body>
+</html>

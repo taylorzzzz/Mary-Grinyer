@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mary Grinyer | Ceramics </title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta charset = "UTF-8">
+	<meta name = "description" content = "Texture is a major part of my ceramic works and an inspiration for the completed design.">
+	<meta name = "keywords" content = "Mary Grinyer, Grinyer, marygrinyer, Ceramics, Sculpture, Printmaking, Fine Art">
+	<meta name = "author" content = "Taylor Ward">
+	<link rel="icon" type="image/png" href="MG.png"/>
+
+	<link rel="stylesheet" type="text/css" href="css/lightgallery.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway" />	
+	<script type="text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#mobile-nav").html($("#main-nav").html());
+			$("#mobile-nav li.super-item > a").prepend("<span>+</span>");
+
+			// disable the default redirect action for links with submenus 
+			$("#mobile-nav li.super-item > a").click(function(event) {
+					event.preventDefault();
+					if ($(this).siblings("#dropdown-list").hasClass("expanded")) {
+						$(this).siblings().removeClass("expanded").slideUp(200,"linear");
+						$(this).children("span").empty();
+						$(this).children("span").text("+");
+					}	
+					else {
+						$(this).siblings().addClass("expanded").slideDown(200,"linear");
+						$(this).siblings("span").empty();
+						$(this).children("span").text("-");
+					}
+				});
+
+			// handle menu clicks
+			$("#menu-trigger").click(function() {
+					if ($("#mobile-nav > ul").hasClass("expanded")) {
+						$("#mobile-nav ul.expanded").removeClass("expanded").slideUp(200, "linear");
+						$(this).removeClass("open");
+					} 
+					else {
+						$("#mobile-nav > ul").addClass("expanded").slideDown(200, "linear");
+						$(this).addClass("open");
+					}
+				});
+
+		});
+	</script>
+
+</head>
+<body>
+	<header>
+		<nav id = "main-nav">
+			<ul id = "menu">
+				<li><a href="index.html">Home</a></li>
+				<li class="super-item"><a href="bio.html">About</a>
+					<ul id = "dropdown-list">
+						<li><a href = "bio.html">Bio</a></li>
+					</ul>
+				</li>
+				<li  id = "active" class="super-item"><a href="work.html">Work</a>
+					<ul id = "dropdown-list">
+						<li  id = "active"><a href = "ceramics.html">Ceramics</a></li>
+						<li><a href = "sculpture.html">Sculpture</a></li>
+					</ul>
+				</li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div id="menu-trigger">Menu</div>
+		<div id="mobile-nav"></div>
+		<div id = "logo">
+			<h1><a href = "index.html">GRINYER</a></h1>
+			<p>Fine Art and Ceramics</p>
+		</div>
+
+	</header>
+	<div class = "content" id = "ceramics-content">
+		<div class = "banner-image" id = "banner-image-ceramics">
+		</div>
+
+		<div class = "work-text" id = "ceramics-text">
+			
+			<h2>Ceramics</h2>
+			<br>
+			<br>
+			<p>Texture is a major part of my ceramic work and an inspiration for the completed design. Often I start out with a hand rolled slab, then look for a way to texture it, then study the clay for an idea for the finished piece. I save most of my textured scraps and then make what I call piece pots. I play around until I create something I like with the pieces. This inspires my creativity. It brings new shapes and styles to mind and then hand. I do have certain styles and method I have developed over time, that I do repeat but no two pieces are the same.</p>
+			<p>Mood is another part of my work. I work with a lot of Black Mountain clay. It has a dark mysterious look. I glaze it with matt turquoise glaze which works as a satin finish with touches of green. Mountains, pines and nature in general come through in many of my glaze choices. The roughness of many of my works is also reminiscent of nature.</p>
+		
+		</div>
+		<div class = "thumbnails" id = "ceramics-thumbnails">
+			<p id = "thumbnail-instructions">Click thumbnails below for more info.</p>
+			<div class = "thumbnail-container" id = "ceramics-thumbnail-container">
+				
+				<div class = "thumbnail" data-src = "assets/imgs/work/c1.jpg">
+					<img src="assets/imgs/thumbnails/thumb1.jpg" alt "Grinyer ceramic 1">
+				</div>				
+				<div class = "thumbnail" data-src = "assets/imgs/work/c2.jpg">
+					<img src="assets/imgs/thumbnails/thumb2.jpg" alt = "Grinyer ceramic 2">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c3.jpg">
+					<img src="assets/imgs/thumbnails/thumb3.jpg" alt = "Grinyer ceramic 3">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c4.jpg">
+					<img src="assets/imgs/thumbnails/thumb4.jpg" alt = "Grinyer ceramic 4">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c5.jpg">
+					<img src="assets/imgs/thumbnails/thumb5.jpg" alt = "Grinyer ceramic 5">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c6.jpg">
+					<img src="assets/imgs/thumbnails/thumb6.jpg" alt = "Grinyer ceramic 6">
+				</div>
+				
+				<div class = "thumbnail" data-src = "assets/imgs/work/c8.jpg">
+					<img src="assets/imgs/thumbnails/thumb8.jpg" alt = "Grinyer ceramic 7">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c9.jpg">
+					<img src="assets/imgs/thumbnails/thumb9.jpg" alt = "Grinyer ceramic 8">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c12.jpg">
+					<img src="assets/imgs/thumbnails/thumb12.jpg" alt = "Grinyer ceramic 9">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c13.jpg">
+					<img src="assets/imgs/thumbnails/thumb13.jpg" alt = "Grinyer ceramic 10">
+				</div>
+				
+				<div class = "thumbnail" data-src = "assets/imgs/work/c15.jpg">
+					<img src="assets/imgs/thumbnails/thumb15.jpg" alt = "Grinyer ceramic 11">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c16.jpg">
+					<img src="assets/imgs/thumbnails/thumb16.jpg" alt = "Grinyer ceramic 12">
+				</div>
+
+				<div class = "thumbnail" data-src = "assets/imgs/work/c21.jpg">
+					<img src="assets/imgs/thumbnails/thumb21.jpg" alt = "Grinyer ceramic 13">
+				</div>
+
+				<div class = "thumbnail" data-src = "assets/imgs/work/c22.jpg">
+					<img src="assets/imgs/thumbnails/thumb22.jpg" alt = "Grinyer ceramic 14">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c23.jpg">
+					<img src="assets/imgs/thumbnails/thumb23.jpg" alt = "Grinyer ceramic 15">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c24.jpg">
+					<img src="assets/imgs/thumbnails/thumb24.jpg" alt = "Grinyer ceramic 16">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c25.jpg">
+					<img src="assets/imgs/thumbnails/thumb25.jpg" alt = "Grinyer ceramic 17">
+				</div>
+				
+				<div class = "thumbnail" data-src = "assets/imgs/work/c27.jpg">
+					<img src="assets/imgs/thumbnails/thumb27.jpg" alt = "Grinyer ceramic 18">
+				</div>
+				
+				<div class = "thumbnail" data-src = "assets/imgs/work/c32.jpg">
+					<img src="assets/imgs/thumbnails/thumb32.jpg" alt = "Grinyer ceramic 19">
+				</div>
+				
+				<div class = "thumbnail" data-src = "assets/imgs/work/c34.jpg">
+					<img src="assets/imgs/thumbnails/thumb34.jpg" alt = "Grinyer ceramic 20">
+				</div>
+				
+				<div class = "thumbnail" data-src = "assets/imgs/work/c36.jpg">
+					<img src="assets/imgs/thumbnails/thumb36.jpg" alt = "Grinyer ceramic 21">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c37.jpg">
+					<img src="assets/imgs/thumbnails/thumb37.jpg" alt = "Grinyer ceramic 22">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c38.jpg">
+					<img src="assets/imgs/thumbnails/thumb38.jpg" alt = "Grinyer ceramic 23">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c39.jpg">
+					<img src="assets/imgs/thumbnails/thumb39.jpg" alt = "Grinyer ceramic 24">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c40.jpg">
+					<img src="assets/imgs/thumbnails/thumb40.jpg" alt = "Grinyer ceramic 25">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c41.jpg">
+					<img src="assets/imgs/thumbnails/thumb41.jpg" alt = "Grinyer ceramic 26">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c42.jpg">
+					<img src="assets/imgs/thumbnails/thumb42.jpg" alt = "Grinyer ceramic 27">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c43.jpg">
+					<img src="assets/imgs/thumbnails/thumb43.jpg" alt = "Grinyer ceramic 28">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c44.jpg">
+					<img src="assets/imgs/thumbnails/thumb44.jpg" alt = "Grinyer ceramic 29">
+				</div>
+				
+				<div class = "thumbnail" data-src = "assets/imgs/work/c46.jpg">
+					<img src="assets/imgs/thumbnails/thumb46.jpg" alt = "Grinyer ceramic 30">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c47.jpg">
+					<img src="assets/imgs/thumbnails/thumb47.jpg" alt = "Grinyer ceramic 31">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c48.jpg">
+					<img src="assets/imgs/thumbnails/thumb48.jpg" alt = "Grinyer ceramic 32">
+				</div>
+				<div class = "thumbnail" data-src = "assets/imgs/work/c49.jpg">
+					<img src="assets/imgs/thumbnails/thumb49.jpg" alt = "Grinyer ceramic 33">
+				</div>
+				
+
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#ceramics-thumbnail-container").lightGallery({
+				download:false,
+			});
+		});
+	</script>
+	
+
+	<!--	lightGallery  -->
+	<script type="text/javascript" src = "js/lightgallery.js"></script>
+	<script type="text/javascript" src = "js/lg-thumbnail.min.js"></script>
+	<script type="text/javascript" src = "js/lg-zoom.js"></script>
+
+	<footer>
+		<div id="slide">
+			<!--
+        	<a href="#"> Twit</a>
+       		<a href="#"> Face</a>
+        	<a href="#"> Etsy</a>
+        	-->
+        	Copyright © 2016 Mary Grinyer
+
+
+    </div>
+	</footer>
+	<script type="text/javascript">
+		$('footer').hover(function() {
+			$('#slide').slideToggle("fast");
+		});
+	</script>
+
+
+
+</body>
+</html>

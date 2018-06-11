@@ -1,0 +1,4 @@
+[16-Aug-2017 00:44:33 UTC] PHP Fatal error:  Call to undefined function apply_filters() in /home/grinyerweb/public_html/polkada.com/wp-includes/load.php on line 316
+[16-Aug-2017 00:44:42 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/grinyerweb/public_html/polkada.com/wp-content/plugins/wp-easy-mode/includes/class-done.php on line 113
+[16-Aug-2017 00:44:42 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/grinyerweb/public_html/polkada.com/wp-content/plugins/wp-easy-mode/includes/class-done.php on line 222
+[16-Aug-2017 00:44:43 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/grinyerweb/public_html/polkada.com/wp-content/plugins/wp-easy-mode/includes/class-done.php:113) in /home/grinyerweb/public_html/polkada.com/wp-includes/pluggable.php on line 1210

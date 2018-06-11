@@ -1,0 +1,3 @@
+Sitemap: http://marygrinyer.com/sitemap.xml
+User-agent:*
+Disallow:

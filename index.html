@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mary Grinyer | Art </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset = "UTF-8">
+	<meta name = "description" content = "Mary Grinyer is an Artist from Riverside, CA working in ceramics, printmaking, jewelry and mixed media">
+	<meta name = "keywords" content = "Mary Grinyer, Grinyer, marygrinyer, Ceramics, Sculpture, Printmaking, Fine Art">
+	<meta name = "author" content = "Taylor Ward">
+	<link rel="icon" type="image/png" href="MG.png"/>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="lightslider/css/lightslider.css">
+	<script type="text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript" src = "lightslider/js/lightslider.js"></script>
+
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("#mobile-nav").html($("#main-nav").html());
+			$("#mobile-nav li.super-item > a").prepend("<span>+</span>");
+
+			// disable the default redirect action for links with submenus 
+			$("#mobile-nav li.super-item > a").click(function(event) {
+					event.preventDefault();
+					if ($(this).siblings("#dropdown-list").hasClass("expanded")) {
+						$(this).siblings().removeClass("expanded").slideUp(200,"linear");
+						$(this).children("span").empty();
+						$(this).children("span").text("+");
+					}	
+					else {
+						$(this).siblings().addClass("expanded").slideDown(200,"linear");
+						$(this).siblings("span").empty();
+						$(this).children("span").text("-");
+					}
+				});
+
+			// handle menu clicks
+			$("#menu-trigger").click(function() {
+					if ($("#mobile-nav > ul").hasClass("expanded")) {
+						$("#mobile-nav ul.expanded").removeClass("expanded").slideUp(200, "linear");
+						$(this).removeClass("open");
+					} 
+					else {
+						$("#mobile-nav > ul").addClass("expanded").slideDown(200, "linear");
+						$(this).addClass("open");
+					}
+				});
+
+		});
+	</script>
+
+
+
+</head>
+<body>
+	<header>
+		<nav id = "main-nav">
+			<ul id = "menu">
+				<li  id = "active"><a href="index.html">Home</a></li>
+				<li class="super-item"><a href="bio.html">About</a>
+					<ul id = "dropdown-list">
+						<li><a href = "bio.html">Bio</a></li>
+					</ul>
+				</li>
+				<li class="super-item"><a href="work.html">Work</a>
+					<ul id = "dropdown-list">
+						<li><a href = "ceramics.html">Ceramics</a></li>
+						<li><a href = "sculpture.html">Sculpture</a></li>
+					</ul>
+				</li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div id="menu-trigger">Menu</div>
+		<div id="mobile-nav"></div>
+		<div id = "logo">
+			<h1><a href = "index.html">GRINYER</a></h1>
+			<p>Fine Art and Ceramics</p>
+		</div>
+
+	</header>
+	<div id = "home-container">
+		<img id = "home-image" width = "2000px" alt = "random"> 
+
+		<script type="text/javascript">
+			window.onload = loadImage();
+
+			function loadImage() {
+				var urls = ['homepage-images/hp-1.jpg','homepage-images/hp-2.jpg','homepage-images/hp-3.jpg','homepage-images/hp-4.jpg'];
+				var baseUrl = 'assets/imgs/work/';
+				var files = ['hp-1','hp-2','hp-3'];
+				var extension = '.jpg';
+				var random = Math.floor(Math.random()*files.length);
+				var url = baseUrl + files[random] + extension;
+				var p = urls[Math.floor(Math.random()*urls.length)];
+				document.getElementById("home-image").src = url;
+			}
+		
+		</script>                                
+		
+		<div id = "home-text">
+			<div id = "show" class="upcoming">
+				<a href="#">
+					<p id = "fecha">10/29/17</p>
+					<p id = "show-gallery">
+						Art on State Street
+					</p>
+					<p id = "show-location">
+						200 Block State St. Redlands, CA
+						<p id = "show-status"></p>
+					</p>
+				</a>
+			</div>
+			<div id = "show" class="upcoming">
+				<a href="#">
+					<p id = "fecha">11/12/17</p>
+					<p id = "show-gallery">
+						Art in The Garden
+					</p>
+					<p id = "show-location">
+						UCR Botanical Garden
+						<p id = "show-status"></p>
+					</p>
+				</a>
+			</div>
+			<div id = "show" class="upcoming">
+				<a href="#">
+					<p id = "fecha">12/2/17</p>
+					<p id = "show-gallery">
+						Studio Tour
+					</p>
+					<p id = "show-location">
+						Redlands, CA
+						<p id = "show-status"></p>
+					</p>
+				</a>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div id="slide">
+			<!--
+        	<a href="#"> Twit</a>
+       		<a href="#"> Face</a>
+        	<a href="#"> Etsy</a>
+        	-->
+        	Copyright © 2016 Mary Grinyer
+
+
+    </div>
+	</footer>
+	<script type="text/javascript">
+		$('footer').hover(function() {
+			$('#slide').slideToggle("fast");
+		});
+	</script>
+<!--
+	<div id = "slide-container">
+		<figure id = "slide">
+			<img id = "slide-img-4" src="ceramic-images-thumbs/c3.jpg">
+			<img id = "slide-img-1" src="ceramic-images-thumbs/c11.jpg">
+			<img id = "slide-img-4" src="ceramic-images-thumbs/c8.jpg">
+			<img id = "slide-img-2" src="ceramic-4.jpg">
+			<img id = "slide-img-3" src="vase-trio-3.jpg">
+			<img id = "slide-img-1" src="ceramic-box.jpg">
+			<img id = "slide-img-4" src="vase-trio-4.jpg">
+			<img id = "slide-img-2" src="holy-vase-3.jpg">
+		</figure>
+	</div>
+-->
+<!--
+	<div id = "slide-container">
+			<ul id = "lightslider">
+				<li data-thumb="ceramic-images-thumbs/c2.jpg"><img src="homepage-images/2.jpg" width="60%"></li>
+				<li data-thumb="ceramic-images-thumbs/c3.jpg"><img src="homepage-images/3.jpg" width="95%"></li>
+				<li data-thumb="ceramic-images-thumbs/c5.jpg"><img src="homepage-images/5.jpg" width="58%"></li>
+				<li data-thumb="ceramic-images-thumbs/c6.jpg"><img src="homepage-images/6.jpg" width="70%"></li>
+			</ul>
+	</div>
+
+
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$("#lightslider").lightSlider({
+				autoWidth:true,
+				loop:true,
+				slidMargin:0,
+				currentPagerPosition:'middle',
+				download: false,
+				adaptiveHeight:true,
+			});
+		});
+	</script>
+-->
+</body>
+</html>

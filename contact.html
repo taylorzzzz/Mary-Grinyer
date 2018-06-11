@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mary Grinyer | Contact </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta charset = "UTF-8">
+	<meta name = "description" content = "Contact Mary Grinyer with questions, comments and inquiries.">
+	<meta name = "keywords" content = "Mary Grinyer, Grinyer, marygrinyer, Ceramics, Sculpture, Printmaking, Contact">
+	<meta name = "author" content = "Taylor Ward">
+	<link rel="icon" type="image/png" href="MG.png"/>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />
+	<script type="text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("#mobile-nav").html($("#main-nav").html());
+			$("#mobile-nav li.super-item > a").prepend("<span>+</span>");
+
+			// disable the default redirect action for links with submenus 
+			$("#mobile-nav li.super-item > a").click(function(event) {
+					event.preventDefault();
+					if ($(this).siblings("#dropdown-list").hasClass("expanded")) {
+						$(this).siblings().removeClass("expanded").slideUp(200,"linear");
+						$(this).children("span").empty();
+						$(this).children("span").text("+");
+					}	
+					else {
+						$(this).siblings().addClass("expanded").slideDown(200,"linear");
+						$(this).siblings("span").empty();
+						$(this).children("span").text("-");
+					}
+				});
+
+			// handle menu clicks
+			$("#menu-trigger").click(function() {
+					if ($("#mobile-nav > ul").hasClass("expanded")) {
+						$("#mobile-nav ul.expanded").removeClass("expanded").slideUp(200, "linear");
+						$(this).removeClass("open");
+					} 
+					else {
+						$("#mobile-nav > ul").addClass("expanded").slideDown(200, "linear");
+						$(this).addClass("open");
+					}
+				});
+
+		});
+	</script>
+</head>
+
+<body>
+	<header>
+		<nav id = "main-nav">
+			<ul id = "menu">
+				<li><a href="index.html">Home</a></li>
+				<li class="super-item"><a href="bio.html">About</a>
+					<ul id = "dropdown-list">
+						<li><a href = "bio.html">Bio</a></li>
+					</ul>
+				</li>
+				<li class="super-item"><a href="work.html">Work</a>
+					<ul id = "dropdown-list">
+						<li><a href = "ceramics.html">Ceramics</a></li>
+						<li><a href = "sculpture.html">Sculpture</a></li>
+					</ul>
+				</li>
+				<li id = "active"><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div id="menu-trigger">Menu</div>
+		<div id="mobile-nav"></div>
+		<div id = "logo">
+			<h1><a href = "index.html">GRINYER</a></h1>
+			<p>Fine Art and Ceramics</p>
+		</div>
+
+	</header>
+	<div class = "content" id = "contact-content">
+		<div id = "contact-pic">
+			<!-- <img src="ceramic-images-thumbs/banner1.jpg" width = "50%"> -->
+		</div>
+	<div id = "contact-form">
+		<div id="form-messages"></div>
+		<p>Questions, comments and inquiries can be sent by filling out the form below.</p>
+		<form id="ajax-contact" method="post" action="mailer.php">
+			<div class="field">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+			</div>
+
+			<div class="field">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+
+			<div class="field">
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" required></textarea>
+			</div>
+
+			<div class="field">
+				<button type="submit">Send</button>
+			</div>
+		</form>
+	</div>
+</div>
+<footer>
+		<div id="slide">
+			<!--
+        	<a href="#"> Twit</a>
+       		<a href="#"> Face</a>
+        	<a href="#"> Etsy</a>
+        	-->
+        	Copyright © 2016 Mary Grinyer
+
+
+    </div>
+	</footer>
+	<script type="text/javascript">
+		$('footer').hover(function() {
+			$('#slide').slideToggle("fast");
+		});
+	</script>
+
+	<script src="jquery-2.1.0.min.js"></script>
+	<script src="app.js"></script>
+
+</body>
+</html>

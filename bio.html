@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mary Grinyer | Bio </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta charset = "UTF-8">
+		<meta name = "description" content = "Mary Grinyer is an Artist from Riverside, CA working in ceramics, sculpture, printmaking, painting and mixed media.">
+		<meta name = "keywords" content = "Mary Grinyer, Grinyer, marygrinyer, Ceramics, Sculpture, Printmaking, Fine Art">
+		<meta name = "author" content = "Taylor Ward">
+
+	<link rel="icon" type="image/png" href="MG.png"/>
+
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />
+		<script type="text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("#mobile-nav").html($("#main-nav").html());
+			$("#mobile-nav li.super-item > a").prepend("<span>+</span>");
+
+			// disable the default redirect action for links with submenus 
+			$("#mobile-nav li.super-item > a").click(function(event) {
+					event.preventDefault();
+					if ($(this).siblings("#dropdown-list").hasClass("expanded")) {
+						$(this).siblings().removeClass("expanded").slideUp(200,"linear");
+						$(this).children("span").empty();
+						$(this).children("span").text("+");
+					}	
+					else {
+						$(this).siblings().addClass("expanded").slideDown(200,"linear");
+						$(this).siblings("span").empty();
+						$(this).children("span").text("-");
+					}
+				});
+
+			// handle menu clicks
+			$("#menu-trigger").click(function() {
+					if ($("#mobile-nav > ul").hasClass("expanded")) {
+						$("#mobile-nav ul.expanded").removeClass("expanded").slideUp(200, "linear");
+						$(this).removeClass("open");
+					} 
+					else {
+						$("#mobile-nav > ul").addClass("expanded").slideDown(200, "linear");
+						$(this).addClass("open");
+					}
+				});
+
+		});
+	</script>
+	</head>
+
+	<body>
+		<header>
+		<nav id = "main-nav">
+			<ul id = "menu">
+				<li><a href="index.html">Home</a></li>
+				<li id = "active" class="super-item"><a href="bio.html">About</a>
+					<ul id = "dropdown-list">
+						<li><a href = "bio.html">Bio</a></li>
+					</ul>
+				</li>
+				<li class="super-item"><a href="work.html">Work</a>
+					<ul id = "dropdown-list">
+						<li><a href = "ceramics.html">Ceramics</a></li>
+						<li><a href = "sculpture.html">Sculpture</a></li>
+					</ul>
+				</li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div id="menu-trigger">Menu</div>
+		<div id="mobile-nav"></div>
+		<div id = "logo">
+			<h1><a href = "index.html">GRINYER</a></h1>
+			<p>Fine Art and Ceramics</p>
+		</div>
+
+	</header>
+
+	<div class = "content" id = "bio-content">
+		<div id = "bio-text">
+			<p>CLAY , paper, fabric, thread, wire, found objects and more are used to create the contemporary art of Mary Grinyer. For 30 years Grinyer has worked in various mediums leading to a passion for ceramics, mixed media, jewelry and printmaking. She loves to experiment with textures, shapes, and colors. Many of the same tools are used to create texture in clay and prints. In printmaking the heart and the interweaving of people, the web of life has been a major theme. Now, in ceramics, the practical use of art in the form of bowls, vases, and bottles is dominant although she is now studying sculpture in clay. The subtle variances in color add to the shape of the clay. The glazes lead to unexpected results just as the pressure of the press can alter a print and add to the art form. This surprise effect is part of the fascination for her in printing and ceramics. 
+			</p>
+			<p>Grinyer studied printmaking under Bruce Bachman, Ron Pokrasso, Dan Weldon and Jan Harvey. She studied ceramics under Lee Johnson, Harvey Erdle, John Hopkins and Steve Horn and has an Associate Art Degree from Lake Tahoe Community College. She currently works in ceramics and sculpture at Ceramic Services in Ontario CA and volunteers teaching hand building ceramics at the Janet Goeske Senior Center.</p>
+			<!--
+			<p>Grinyer's interest in art was first sparked by an art instructor at Ramona High School in Riverside CA, Mr. Stover. Studying under him for 3 years led to a lifetime fascination for creating art and years of watercolor painting. Mary Grinyer has an Associate Art Degree from Lake Tahoe Community College. She has been studying sculpture at Riverside City College with Steve Horn. Grinyer works in ceramics and sculpture at Ceramic Services in Ontario, CA currently.</p>
+			-->
+		</div>
+		<div id = "bio-pic">
+
+		</div>
+		
+	</div>
+	<footer>
+		<div id="slide">
+			<!--
+        	<a href="#"> Twit</a>
+       		<a href="#"> Face</a>
+        	<a href="#"> Etsy</a>
+        	-->
+        	Copyright © 2016 Mary Grinyer
+
+
+    </div>
+	</footer>
+	<script type="text/javascript">
+		$('footer').hover(function() {
+			$('#slide').slideToggle("fast");
+		});
+	</script>
+	</body>
+</html>
